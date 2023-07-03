@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from 'proptypes';
+import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import styles from './ContactForm.module.css';
+
 
 class ContactForm extends React.Component {
     static propTypes = {
