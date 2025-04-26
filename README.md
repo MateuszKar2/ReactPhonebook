@@ -1,113 +1,44 @@
-# React homework template
+# ReactPhonebook
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+**ReactPhonebook** is a simple phonebook application built with React. It allows users to manage their contacts, add new entries, and search for existing contacts. This project is a great way to practice React concepts such as state management, form handling, and filtering.
 
-## Создание репозитория по шаблону
+## Features
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+- **Add Contacts**: Easily add new contacts with name and phone number.
+- **Search Contacts**: Quickly find contacts by name using a search bar.
+- **Edit/Delete Contacts**: Edit or delete contact entries as needed.
+- **Responsive UI**: The app is fully responsive and works well on both desktop and mobile devices.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## Technologies Used
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+- **React (v17+)**: The core JavaScript library for building user interfaces.
+- **JSX**: A syntax extension that allows mixing HTML and JavaScript.
+- **CSS**: For styling the app and ensuring it is responsive.
+- **React Hooks**: Using `useState` and `useEffect` for managing state and lifecycle in functional components.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+## Components
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+- **ContactForm**: Component to add new contacts to the phonebook.
+- **ContactList**: Displays the list of contacts.
+- **ContactItem**: Represents each individual contact in the list.
+- **SearchBar**: A search input field to filter contacts by name.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+## How to Use
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+1. **Add a Contact**: Fill in the name and phone number in the form and click "Add".
+2. **Search Contacts**: Use the search bar at the top to filter contacts by name.
+3. **Edit/Delete Contacts**: Click on a contact to edit or delete it.
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+## Contributing
 
-## Подготовка к работе
+Feel free to fork this repository, create issues, or submit pull requests. Contributions are always welcome!
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+## License
 
-## Деплой
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+## Acknowledgements
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
-
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
-
-![GitHub Pages settings](./assets/repo-settings.png)
-
-### Статус деплоя
-
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
-
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/deploy-status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+- [React Official Documentation](https://reactjs.org/) – For providing the core framework and learning resources.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) – For valuable JavaScript and web development tutorials.
